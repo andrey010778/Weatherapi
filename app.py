@@ -3,8 +3,8 @@ from weather_layouts import create_layout
 from callbacks import register_callbacks
 import dash_bootstrap_components as dbc
 
-app = Dash(external_stylesheets=[dbc.themes.DARKLY])
-app.title = "Погодный дашборд"
+app = Dash(external_stylesheets=[dbc.themes.LUX])
+app.title = "Состояние воздуха"
 
 app.layout = create_layout()
 
