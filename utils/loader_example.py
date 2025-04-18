@@ -12,6 +12,7 @@ LANG = 'ru'
 
 response = requests.get(API_URL, params={'key': API_KEY, 'q': 'Санкт-Петербург', 'days': DAYS, 'aqi': "YES", 'lang': LANG})
 data = response.json()
+print(data)
 location = data['location']
 forecast_hours = data['forecast']['forecastday'][0]['hour']
 city_name = location['name']
