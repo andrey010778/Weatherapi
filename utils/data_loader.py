@@ -9,12 +9,13 @@ API_KEY = os.getenv("API_KEY")
 API_URL = os.getenv("API_URL")
 DAYS = 1
 LANG = 'ru'
+aqi = 'yes'
 
 
 
 
 def load_data(city):
-    response = requests.get(API_URL, params={'key': API_KEY, 'q': city, 'days': DAYS, 'aqi': "YES", 'lang': LANG})
+    response = requests.get(API_URL, params={'key': API_KEY, 'q': city, 'days': DAYS, 'aqi': aqi, 'lang': LANG})
     data = response.json()
    
 
