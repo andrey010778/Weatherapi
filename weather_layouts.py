@@ -15,7 +15,7 @@ def create_layout():
         dbc.Row([
             dbc.Col(dbc.Card(id='weather-output', body=True), width=6, xs=12, md=6),
             dbc.Col([
-                dbc.Input(id='city-input', value='Пушкин', type='text', placeholder="Введите город", debounce=True),
+                dbc.Input(id='city-input', value='London', type='text', placeholder="Введите город", debounce=True),
             ], width=6, xs=12, md=6),
             ], className="mb-3"),
 

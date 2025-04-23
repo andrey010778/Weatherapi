@@ -15,7 +15,7 @@ aqi = 'yes'
 
 
 def load_data(city):
-    response = requests.get(API_URL, params={'key': API_KEY, 'q': city, 'days': DAYS, 'aqi': aqi, 'lang': LANG})
+    response = requests.get(API_URL, params={'key': API_KEY, 'q': city, 'days': DAYS, 'aqi': "yes", 'lang': LANG})
     data = response.json()
    
 
