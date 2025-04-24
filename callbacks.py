@@ -19,7 +19,7 @@ def register_callbacks(app):
     def update_dashboard(city):
         data = load_data(city)
         
-        # Создаем карточку с погодой с темным стилем
+        
         weather_card = dbc.Card(
             dbc.CardBody([
                 html.Div([
@@ -54,7 +54,7 @@ def register_callbacks(app):
             }
         )
         
-        # Создаем графики с темной темой
+       
         co_fig = create_pollution_figure(data, 'co', 'Концентрация угарного газа(CO)', 'мг/м³', '#FF5733', 5)
         no2_fig = create_pollution_figure(data, 'no2', 'Концентрация диоксида азота (NO₂)', 'мкг/м³', '#33A1FF', 40)
         o3_fig = create_pollution_figure(data, 'o3', 'Концентрация озона (O₃)', 'мкг/м³', '#33FF57', 30)
@@ -98,7 +98,7 @@ def create_pollution_figure(data, pollutant, title, unit, color, threshold=None)
     )
     
       
-    # Добавляем анимацию
+    
     fig.update_traces(
         line_shape='spline',
         marker_line_width=0.5,
