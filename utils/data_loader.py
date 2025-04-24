@@ -5,7 +5,7 @@ import requests
 
 load_dotenv()
 
-API_KEY = 'ace812db805f4d4a8fd230715252304'
+API_KEY = os.getenv("API_KEY")
 API_URL = os.getenv("API_URL")
 DAYS = 1
 LANG = 'ru'
