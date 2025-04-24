@@ -5,7 +5,9 @@ import requests
 
 load_dotenv()
 
-API_KEY = os.getenv("API_KEY")
+# API_KEY = os.getenv("API_KEY")
+
+API_KEY='ace812db805f4d4a8fd230715252304'
 API_URL = os.getenv("API_URL")
 DAYS = 1
 LANG = 'ru'
@@ -17,8 +19,8 @@ aqi = 'yes'
 def load_data(city):
     response = requests.get(API_URL, params={'key': API_KEY, 'q': city, 'days': DAYS, 'aqi': "yes", 'lang': LANG})
     data = response.json()
-   
 
+   
     location = data['location']
     forecast_hours = data['forecast']['forecastday'][0]['hour']
     city_name = location['name']
@@ -69,3 +71,4 @@ def load_data(city):
             'so2': so2,
             'pm2_5': pm2_5,
             'pm10': pm10}
+

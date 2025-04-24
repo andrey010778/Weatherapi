@@ -1,8 +1,9 @@
-from dash import Input, Output, html
+from dash import Input, Output, html, dcc
 from utils.data_loader import load_data
 import plotly.graph_objects as go
+import dash_bootstrap_components as dbc
 
- 
+
 def register_callbacks(app):
     @app.callback(
         Output('weather-output', 'children'),
@@ -63,3 +64,4 @@ def register_callbacks(app):
 
         
         return weather_info, co_fig, no2_fig, o3_fig, so2_fig, pm2_5_fig, pm10_fig 
+
