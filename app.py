@@ -13,3 +13,5 @@ register_callbacks(app)
 
 if __name__ == "__main__":
     app.run(debug=False) # При продакшене используем False вместо True
+
+#  Дописываю строчку для коммита
