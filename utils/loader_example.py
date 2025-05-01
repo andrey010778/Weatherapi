@@ -49,4 +49,4 @@ so2 = [h['air_quality']['so2'] for h in forecast_hours]
 pm2_5 = [h['air_quality']['pm2_5'] for h in forecast_hours]
 pm10 = [h['air_quality']['pm10'] for h in forecast_hours]
 
-print(co)
+print(co, no2, o3, so2, pm2_5, pm10)
